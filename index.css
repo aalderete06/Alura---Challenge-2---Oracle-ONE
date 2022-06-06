@@ -1,0 +1,267 @@
+/*pantalla*/
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: url(Imagen/cementerio.png) no-repeat center;
+    background-size: cover;
+}
+header{
+    background: linear-gradient(to bottom right, rgb(64, 224, 212), rgb(175, 238, 238), rgb(64, 224, 212));
+    display:  flex;
+    margin: 0 0 40px 0;
+    align-items: center;
+    
+}
+.titulo{
+    padding-left: 10px;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: bold;
+}
+.contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+.btn-inicio{
+    display: block;
+    background-color: rgb(64, 224, 212);
+    box-shadow: #95a5ac 4px 4px 0px;
+    border-radius: 16px;
+    border-color: rgb(64, 224, 212);
+    transition: transform 200ms, box-shadow 200ms;
+    width: 20rem;
+    height: 5rem;
+    color: white;
+    font-size: 30px;
+    margin: 80px;
+}
+.btn-inicio:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: rgb(175, 238, 238) 0px 0px 0px;
+}
+.btn-inicio:hover{
+    background-color: #79DAE8;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.btn-link{
+    text-decoration: none;
+}
+footer {
+    background: linear-gradient(to bottom right, rgb(64, 224, 212), rgb(175, 238, 238), rgb(64, 224, 212));
+    text-align: center;
+    color: black;
+    padding: 15px;
+    margin-top: 20px;
+    width: 98vw;
+}
+@keyframes animacion {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+
+/* Seccion del canvas*/
+.lienzo {
+    display: flex;
+}
+
+.lienzo>* {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+canvas {
+    background: rgba(255, 255, 255, .7);
+}
+/*------------------*/
+
+/* Seccion del area de texto*/
+.contenedor-letras {
+    /*margin-top: 10px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-letras label {
+    width: 20PX;
+    height: auto;
+    padding-bottom: 5PX;
+    border-bottom: 8px rgb(64, 224, 212);
+    color: rgb(64, 224, 212);
+    font-weight: bold;
+    border-style: solid;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 10PX;
+}
+
+/*-------------------*/
+.contenedor-letras-erroneas {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letras-equivocadas {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+/* Contenedor de letras erroneas*/
+/* Seccion del contenedor de botones del juego*/
+.contenedor-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Contenedor letras*/
+.contenedor-letra {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letra{
+    width: 200px;
+    background: transparent;
+    color: rgb(64, 224, 212);
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    padding-bottom: 0px;
+    text-align: center;
+}
+.letra:focus{
+    outline: none;
+}
+/*Agregar palabra nueva contenedor*/
+.palabra-nueva {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.palabra-in {
+    text-transform: uppercase;
+    margin-bottom: 40PX;
+    background: transparent;
+    color: rgb(64, 224, 212);
+    font-size: 30px;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.palabra-in:focus {
+    color: rgb(64, 224, 212);
+    font-weight: bold;
+    outline: none;
+}
+.palabra-in::placeholder {
+    text-transform: lowercase;
+    color: rgb(64, 224, 212);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*aviso*/
+.aviso {
+    color: rgb(64, 224, 212);
+    font-weight: bold;
+}
+.exclamacion{
+    width: 16px;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+/* medias queries*/
+@media (min-width: 50px) and (max-width: 480px) {
+    main {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+    }
+    .titulo h2 {
+        font-size: 60px;
+    }
+    .logo {
+        display: none;
+    }
+    .contenedor-btns {
+        display: block;
+    }
+    .btn-inicio {
+        display: block;
+        width: 15rem;
+        height: 4rem;
+        font-size: 20px;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .lienzo {
+        margin-top: 70px;
+    }
+    canvas {
+        width: 280px;
+    }
+    .swal-modal {
+        width: 100%;
+    }
+    .contenedor-letras label {
+        width: 20PX;
+        height: auto;
+        padding-bottom: 5PX;
+        border-bottom: 8px rgb(64, 224, 212);
+        color: rgb(64, 224, 212);
+        font-weight: bold;
+        border-style: solid;
+        text-align: center;
+        font-size: 30px;
+        margin-right: 10PX;
+    }
+
+    .letras-equivocadas {
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 20px;
+    }
+    .palabra-in {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .aviso {
+        font-size: 10px;
+    }
+    .exclamacion{
+        width: 10px;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="vewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Juego del Ahorcado</title>
+        <link rel="shortcut icon" href="imagen/Vector.png" type="imagen/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header class="encabezado">
+            <h1><img src="Imagen/Logo.png" class="logo Alura"></h1>
+            <h2 class="titulo">Alura Oracle ONE - Clallenge 2</h2>
+        </header>        
+        <main>
+            <section class="lienzo">
+                <canvas id="areaDibujo"> </canvas>
+            </section>            
+            <section class="contenedor-letras" id="cajaLetras">                
+            </section>
+            <section class="contenedor-letras-erroneas">
+                <label class="letras-equivocadas" id="contenedorError" for=""></label>
+            </section>
+            <section class="contenedor-letra">
+                <input class="letra" type="text" name="" id="letraIngresada" placeholder="Ingresa una letra...">
+            </section>
+            <section class="contenedor-btns">
+                <input class="btn-inicio" id="nuevoJuego" type="button" value="Nuevo Juego">
+                <a class="btn-link" href="index.html"><input class="btn-inicio" type="button" value="Desistir"></a>
+            </section>
+        </main>
+         <footer> <!--pie de pagina-->
+            <a href="https://github.com/aalderete06?tab=repositories" class="icono"><img src="Imagen/github.svg" alt="" width="20"></a>
+            <a href="https://www.linkedin.com/in/angel-alberto-alderete-46036b79/" class="icono"><img src="Imagen/linkedin.svg" alt="" width="20"></a>
+            <a href="mailto:aalderete06@outlook.com" class="iconos"><img src="Imagen/mail.svg" alt="" width="20px"></a>
+            <p>&copy; 2022 - Angel Alberto Alderete</p>            
+        </footer>        
+        <script src="main.js"></script>
+        <script src="dibujo.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>
